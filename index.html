@@ -98,16 +98,17 @@
         <p style="font-size: 20px; color: #bbb; margin-top: 10px;">connect to hm_cityconstruct</p>
     </div>
 
-    <div id="version-tag">beta build hmod-19436</div>
+    <div id="version-tag">Build 1</div>
 
     <div id="propMenu">
-        <h2 style="color: #00f0ff; margin-top: 0;">Spawn Menu</h2>
-        <div class="prop-grid">
-            <button class="prop-btn" id="btn-crate">Spawn Large Crate</button>
-            <button class="prop-btn" id="btn-metal">Spawn Heavy Girder</button>
-            <button class="prop-btn" id="btn-platform">Spawn Flat Ramp</button>
-        </div>
+    <h2 style="color: #00f0ff; margin-top: 0;">Spawn Menu</h2>
+    <div class="prop-grid">
+        <button class="prop-btn" id="btn-crate">Spawn Large Crate</button>
+        <button class="prop-btn" id="btn-metal">Spawn Heavy Girder</button>
+        <button class="prop-btn" id="btn-platform">Spawn Flat Ramp</button>
+        <button class="prop-btn" id="btn-heavy-cube">Spawn Heavy Cube</button>
     </div>
+</div>
 
     <script type="module">
         import * as THREE from 'https://esm.sh/three@0.160.0';
@@ -361,15 +362,22 @@ createRoad(0, 150, 'x', 800);
         menuEl.onclick = () => { controls.lock(); menuEl.style.display = 'none'; };
 
         document.querySelectorAll('.prop-btn').forEach(btn => {
-            btn.onclick = (e) => {
-                const aim = new THREE.Vector3(); camera.getWorldDirection(aim);
-                const spawnPos = camera.position.clone().add(aim.multiplyScalar(12));
-                if(e.target.id === 'btn-crate') createObj(spawnPos.x, spawnPos.y, spawnPos.z, 4, 4, 4, 0x8b5a2b, false);
-                if(e.target.id === 'btn-metal') createObj(spawnPos.x, spawnPos.y, spawnPos.z, 3, 10, 3, 0x44444c, false);
-                if(e.target.id === 'btn-platform') createObj(spawnPos.x, spawnPos.y, spawnPos.z, 12, 0.8, 6, 0xaa6622, false);
-                document.getElementById('propMenu').style.display = 'none'; controls.lock();
-            };
-        });
+    btn.onclick = (e) => {
+        const aim = new THREE.Vector3(); 
+        camera.getWorldDirection(aim);
+        const spawnPos = camera.position.clone().add(aim.multiplyScalar(12));
+        
+        if(e.target.id === 'btn-crate') createObj(spawnPos.x, spawnPos.y, spawnPos.z, 4, 4, 4, 0x8b5a2b, false);
+        if(e.target.id === 'btn-metal') createObj(spawnPos.x, spawnPos.y, spawnPos.z, 3, 10, 3, 0x44444c, false);
+        if(e.target.id === 'btn-platform') createObj(spawnPos.x, spawnPos.y, spawnPos.z, 12, 0.8, 6, 0xaa6622, false);
+        
+        // Added condition for the Heavy Metal Cube (adjust size e.g., 5, 5, 5 to your liking)
+        if(e.target.id === 'btn-heavy-cube') createObj(spawnPos.x, spawnPos.y, spawnPos.z, 5, 5, 5, 0x55555c, false);
+
+        document.getElementById('propMenu').style.display = 'none'; 
+        controls.lock();
+    };
+});
 
         // 6. COLLISION-SAFE PHYSGUN BEAM SYSTEM
         let grabbed = null;
