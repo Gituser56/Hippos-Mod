@@ -1,5 +1,5 @@
 
-#Hippos Mod uses WS/WSS to implement multiplayer services.
+# Hippos Mod uses WS/WSS to implement multiplayer services.
 
 # ws: a Node.js WebSocket library
 
