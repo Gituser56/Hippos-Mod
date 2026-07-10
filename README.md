@@ -12,7 +12,7 @@ Code documentation, and all assets used are used for testing, educational, proto
 ALL code and materials conatined within this repository are releaed under the MIT License, meaning you are free to use, modify, and distribute this software according to the License text, though you have to credit the original creator as they claim copyright over this project.
 
 3. No Warranty & Limitation of Liability:
-The software is provivded "AS IS," without warranty of any kind, express or implied. In no event shall the authors or copyright holders be liable for any claim, damages, or other liability arising from the use or distribution of this sandbox code.
+The software is provided "AS IS," without warranty of any kind, express or implied. In no event shall the authors or copyright holders be liable for any claim, damages, or other liability arising from the use or distribution of this sandbox code.
 
 4. Acceptable Use & Contributions:
 - Issue Reporting: Feel free to open issues to report bugs or suggest enhancements.
