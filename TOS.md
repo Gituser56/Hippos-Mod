@@ -1,4 +1,4 @@
-##Terms of Service & Usage Policies
+# Terms of Service & Usage Policies
 
 1. Sandbox Purposes:
 This web application as provided as a sandbox, an experimental or testing environment.
@@ -15,4 +15,4 @@ The software is provided "AS IS," without warranty of any kind, express or impli
 - Contributions: If you submit a pull request, you agree that your contributions will also be licensed under the MIT license.
 - Content Moderation: The repository maintainer reserves the right to remove, reject, or ignore pull requests, issues, forks, that are deemed inappropiate, spam, or malicious.
 
-##PLEASE ACCEPT THESE TERMS OF SERVICE OR YOU WILL BE PROHIBITED FROM USING THIS APPLICATION
+# PLEASE ACCEPT THESE TERMS OF SERVICE OR YOU WILL BE PROHIBITED FROM USING THIS APPLICATION
